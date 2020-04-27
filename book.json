@@ -1,0 +1,87 @@
+{
+    "title": "Study",
+    "author": "ruchan",
+    "description": "note for everything",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "links": {
+        "sidebar": {
+            "我的主页": "https://crcrc.me"
+        }
+    },
+    "styles": {
+        "website": "./styles/website.css"
+    },
+    "structure": {
+        "readme": "README.md"
+    },
+     "plugins": [
+        "-sharing","sharing-plus",
+        "highlight",
+        "-lunr", "-search", "search-pro",
+        "splitter",
+        "collapsible-menu",
+        "katex",
+        "copy-code-button",
+        "github", "github-buttons",
+        "tbfed-pagefooter",
+        "back-to-top-button",
+		"popup",
+		"favicon",
+        "anchors"
+    ],
+    "pluginsConfig": {
+        "theme-default": {
+            "showLevel": true
+        },
+        "sharing": {
+            "douban": false,
+            "facebook": false,
+            "google": false,
+            "hatenaBookmark": false,
+            "instapaper": false,
+            "line": false,
+            "linkedin": false,
+            "messenger": false,
+            "pocket": false,
+            "qq": false,
+            "qzone": false,
+            "stumbleupon": false,
+            "twitter": false,
+            "viber": false,
+            "vk": false,
+            "weibo": false,
+            "whatsapp": false,
+            "all": [
+                "douban","qzone","weibo","facebook", "google", "twitter"     
+            ]
+        },
+		"favicon": {
+            "shortcut": "assets/images/favicon.ico",
+            "bookmark": "assets/images/favicon.ico",
+            "appleTouch": "assets/images/apple-touch-icon.png",
+            "appleTouchMore": {
+                "120x120": "assets/images/apple-touch-icon-120x120.png",
+                "180x180": "assets/images/apple-touch-icon-180x180.png"
+			}
+        },
+        "github": {
+            "url": "https://github.com/Nimnahc2020"
+        },
+        "github-buttons": {
+            "buttons": [{
+                "user": "Nimnahc2020",
+                "repo": "gitbook",
+                "type": "star",
+                "size": "small",
+                "count": true
+                }
+            ]
+        },
+        "tbfed-pagefooter": {
+            "copyright":"&copy ruchan",
+            "modify_label": "最后修改于：",
+            "modify_format": "YYYY-MM-DD"
+        }
+    }
+}

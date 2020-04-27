@@ -22,12 +22,12 @@
   },
   "devDependencies": {},
   "scripts": {
+	"build": "npm install -g gitbook-cli && gitbook install && gitbook build"
     "test": "echo \"Error: no test specified\" && exit 1"
-	"build": "gitbook build"
   },
   "repository": {
     "type": "git",
-    "url": "git@Nimnahc2020.github.com:Nimnahc2020/mybook.git"
+    "url": "git+https://github.com/Nimnahc2020/mybook.git"
   },
   "author": "",
   "license": "ISC",

@@ -53,7 +53,7 @@
             "weibo": false,
             "whatsapp": false,
             "all": [
-                "douban","qzone","weibo","facebook", "google", "twitter"     
+                "douban","qq","weibo","facebook", "google", "twitter"     
             ]
         },
 		"favicon": {

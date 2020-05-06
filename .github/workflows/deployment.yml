@@ -1,0 +1,41 @@
+name: Deployment
+
+on:
+  push:
+    branches: [gh-pages] # only push events on source branch trigger deployment
+
+jobs:
+  hexo-deployment:
+    runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai
+      
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        submodules: true
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+               
+    - name: Install dependencies & Generate static files
+      run: |
+        node -v
+        npm i -g gitbook-cli
+        gitbook install
+        gitbook build
+    - name: Deploy to Github Pages
+      env:
+        GIT_NAME: Nimnahc2020
+        GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
+        REPO: github.com/Nimnahc2020/mybook
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      run: |
+        cd ./_book && git init && git add .
+        git config --global user.name $GIT_NAME
+        git config --global user.email $GIT_EMAIL
+        git commit -m "Site deployed by GitHub Actions"
+        git push --force --quiet "https://$GH_TOKEN@$REPO" master:master

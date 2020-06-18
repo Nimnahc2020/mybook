@@ -22,7 +22,7 @@
         "splitter",
         "collapsible-menu",
         "katex",
-        "copy-code-button",
+		"code",
         "github", "github-buttons",
         "tbfed-pagefooter",
         "back-to-top-button",
